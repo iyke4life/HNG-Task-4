@@ -24,7 +24,7 @@
                 error_message.style.padding = "12px";
             
                 if(name.length < 4){
-                    text = "Please enter valid Name";
+                    text = "Please enter valid Name, at least 4 characters";
                     error_message.innerHTML = text;
                     return false;
                 }
@@ -39,7 +39,7 @@
                     return false;
                 }
                 if(message.length < 20){
-                    text = "Please enter more characters to your Message";
+                    text = "Your Message should be at least 20 charcaters";
                     error_message.innerHTML = text;
                     return false;
                 }
@@ -139,7 +139,28 @@
                                 <i class="fa fa-instagram"></i></a>
                             </li>
                         </ul>
-                        </div>
+                        </div><hr>
+                    
+                        <div class="interest-icons">
+                            <h2>Interests</h2>
+                        <ul>
+                            <li>
+                                <i class="fa fa-headphones"></i>
+                            </li>
+                            <li>
+                                <i class="fa fa-tv"></i>
+                            </li>
+                            <li>
+                                <i class="fa fa-gamepad"></i>
+                            </li>
+                            <li>
+                                <i class="fa fa-camera"></i>
+                            </li>
+                            <li>
+                                <i class="fa fa-book"></i>
+                            </li>
+                        </ul>
+                        </div>    
                 </div> <!--End wrapper-->
             </div> <!--End section-left-->
 
@@ -148,7 +169,7 @@
                     <div class="content">
                         <h2>About Me</h2>
                         <p>An individual eager to learn and develop in that which can coach, mentor and develop my personality while bringing valuable perspectives or expertise to the company’s continuous progress.</p>
-                    </div>
+                    </div><hr>
                     <div class="content">
                         <h2>Work Experience</h2>
                         <p><strong>JoeTech</strong>, Imo State - <i>Electrical/Electronic Technician.</i></p>
@@ -159,7 +180,7 @@
 
 		                <p><strong>Industrial Training</strong>, Rivers State — <i>Currently on internship at Afam Power Plant.</i></p>
 		                <p>JUNE 2019 - NOVEMBER 2019</p>
-                    </div>
+                    </div><hr>
                     <div class="education">
                         <h2>Education</h2>
                         <p><strong>University of Nigeria, Nsukka</strong>, Enugu State - <i>B.ENG(IN VIEW).</i></p>
@@ -167,7 +188,7 @@
 
 			            <p><strong>His Grace High School</strong>, Enugu State — <i>West African School Certificate.</i></p>
 			            <p>SEPTEMBER 2009 - SEPTEMBER 2015</p>
-                    </div>
+                    </div><hr>
                     <div class="contact-me">
                         <h2>Contact Me</h2>
                         <div id="error_message"></div>
@@ -197,6 +218,12 @@ body{
 }
 
 .social-icons ul{
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.8em;
+    color: black;
+}
+.interest-icons ul{
     display: flex;
     justify-content: space-between;
     font-size: 1.8em;
@@ -286,7 +313,15 @@ h3{
     text-decoration: none;
     color:white;
 }
+.interest-icons i{
+    text-decoration: none;
+    color:white;
+}
 .social-icons a:hover{
+    color: black;
+    transition: all 0.3s ease;
+}
+.interest-icons i:hover{
     color: black;
     transition: all 0.3s ease;
 }
@@ -317,7 +352,7 @@ h3{
 }
 .contact-me #error_message{
     padding: 0px; 
-    width: 270px;
+    width: 310px;
     background: #FE8B8E;
     font-size: 13px;
     font-weight: bold;
@@ -385,6 +420,9 @@ input:focus{
     }
     #message{
         width:250px;
+    }
+    .contact-me #error_message{
+        width:170px;
     }
 }
 </style>

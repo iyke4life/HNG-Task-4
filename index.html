@@ -4,9 +4,10 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, intial-scale=1.0">
-	<title>New Resume</title>
+	<title>IKECHUKWU-PETER</title>
 	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
-    <link href="https://fonts.googleapis.com/css?family=Dancing+Script|Montserrat|Sanchez&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Sanchez&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="https://res.cloudinary.com/iyke4life/image/upload/v1567535148/resume_nlretz.png">
     
 </head>
 <body>
@@ -24,17 +25,7 @@
                 error_message.style.padding = "12px";
             
                 if(name.length < 4){
-                    text = "Please enter valid name";
-                    error_message.innerHTML = text;
-                    return false;
-                }
-                if(message.length < 20){
-                    text = "Please enter more characters to your message";
-                    error_message.innerHTML = text;
-                    return false;
-                }
-                if(message.length < 2){
-                    text = "Please enter more characters to your title";
+                    text = "Please enter valid Name";
                     error_message.innerHTML = text;
                     return false;
                 }
@@ -43,6 +34,17 @@
                     error_message.innerHTML = text;
                     return false;
                 }
+                if(title.length < 2 ){
+                    text = "Please enter more characters to your Title";
+                    error_message.innerHTML = text;
+                    return false;
+                }
+                if(message.length < 20){
+                    text = "Please enter more characters to your Message";
+                    error_message.innerHTML = text;
+                    return false;
+                }
+                
                 alert("Thank you for getting in touch! We appreciate you contacting us.");
             }
             </script>
@@ -52,7 +54,7 @@
             <img class="img"src="https://res.cloudinary.com/iyke4life/image/upload/v1566518505/IMG_20180325_155109_710_hr8dw1.jpg" alt="profile-image">
             <div class="title-holder">
                 <div class="name">Ikechukwu Okonkwo</div>
-                <div class="what-i-do">Frontend Developer & UI/UX Designer</div>
+                <div class="what-i-do">Front-end Developer & Graphics Designer</div>
             </div>
         </div> <!--End header-->
         <div class="content-body">
@@ -114,28 +116,30 @@
                             <li><i class="fa fa-envelope"></i><a href="http://oikechukwu11@gmail.com/"target="_blank">oikechukwu11@gmail.com</a></li>
                         </ul>
                     </div><hr>
-                    <div class="list-items">
+                    <div class="social-icons">
                             <h2>Socials</h2>
-                            <p>
-                                <i class="fa fa-linkedin"></i>
-                                <span><a href="https://linkedin.com/">iyke4life</a></span><!--LinkedIn-->
-                            </p>
-                            <p>
-                                <i class="fa fa-github"></i>
-                                <span><a href="https://github.com/iyke4life">iyke4life</a></span><!--GitHub-->
-                            </p>
-                            <p>
-                                <i class="fa fa-facebook"></i>
-                                <span><a href="https://facebook.com/">iyke4life</a></span><!--Facebook-->
-                            </p>
-                            <p>
-                                <i class="fa fa-twitter"></i>
-                                <span><a href="https://twitter.com/">iyke4life</a></span><!--Twitter-->
-                            </p>
-                            <p>
-                                <i class="fa fa-instagram"></i>
-                                <span><a href="https://instagram.com/">iyke4life</a></span><!--Instagram-->
-                            </p>
+                        <ul>
+                            <li>
+                                <a href="https://www.linkedin.com/in/ikechukwu-o-19548b126/" target="_blank">
+                                <i class="fa fa-linkedin"></i></a>
+                            </li>
+                            <li>
+                                    <a href="https://github.com/iyke4life" target="_blank">
+                                <i class="fa fa-github"></i></a>
+                            </li>
+                            <li>
+                                    <a href="https://facebook.com/iyke.okonkwo.967" target="_blank">
+                                <i class="fa fa-facebook"></i></a>
+                            </li>
+                            <li>
+                                    <a href="https://twitter.com/iyke_4_life" target="_blank">
+                                <i class="fa fa-twitter"></i></a>
+                            </li>
+                            <li>
+                                    <a href="https://www.instagram.com/iyke_4_life/" target="_blank">
+                                <i class="fa fa-instagram"></i></a>
+                            </li>
+                        </ul>
                         </div>
                 </div> <!--End wrapper-->
             </div> <!--End section-left-->
@@ -169,11 +173,11 @@
                         <h2>Contact Me</h2>
                         <div id="error_message"></div>
                         <form id="myform" onsubmit="return validation()">
-                            <input  type="text" placeholder="Your name" name="text" id="text" >
+                            <input  type="text" placeholder="Name" name="text" id="text" >
                             <input  type="email" placeholder="Email" name="email" id="email">
                             <input  type="text" placeholder="Title" name="title" id="title">
-                            <textarea id="message" placeholder="Your message here..." ></textarea>
-                            <input type="submit" value="Submit">
+                            <textarea id="message" placeholder="  Type message here..." ></textarea>
+                            <input type="submit" value="SUBMIT">
                         </form>
                     </div>
                 </div>
@@ -190,14 +194,25 @@ body{
     background-color: #fff;
     margin: 1em auto;
     max-width: 90em;
-    font-family: 'Righteous', cursive; 
+    font-family: 'Sanchez', serif;
 }
+
+.social-icons ul{
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.8em;
+    color: black;
+}
+
 .p, ul{
     letter-spacing: .2em;
 }
 :root{
     --yellowish: #eeb14f;
     --dark-purple: #263547;
+}
+.list-items i{
+    color: white;
 }
 .container{
     display: flex;
@@ -261,11 +276,20 @@ h2{
 h3{
     text-transform: uppercase;
     font-size: 0.7em;
-    font-weight: normal;
+    font-weight: bold;
+    color: var(--yellowish);
 }
 .list-items a{
     text-decoration: none;
     color:black;
+}
+.social-icons a{
+    text-decoration: none;
+    color:white;
+}
+.social-icons a:hover{
+    color: black;
+    transition: all 0.3s ease;
 }
 .section-right{
     flex: 2;
@@ -282,18 +306,19 @@ h3{
 } 
 .footer{
     text-align: center;
+    color:white;
     background-color: var(--dark-purple);
     height: 50px;
 }  
 #myform{
     margin: 5px auto;
-    width: 250px;
+    width: 230px;
     color: steelblue;
     float: left;
 }
 .contact-me #error_message{
     padding: 0px; 
-    width: 250px;
+    width: 270px;
     background: #FE8B8E;
     font-size: 13px;
     font-weight: bold;
@@ -307,39 +332,61 @@ input{
 input[type="text"]{
     display: block;
     margin-bottom: 5px;
-    width: 100%;
+    width: 200%;
     background: #FAF6D9;
     border: 2px solid steelblue;
     border-radius: 10px;
+    font-family: 'Righteous', cursive;
+    font-size: 16px;
 }
 textarea{
     margin-bottom: 5px;
     height: 60px;
-    width: 105%;
+    width: 210%;
     background: #FAF6D9;
     border: 2px solid steelblue;
     border-radius: 10px;
+    font-family: 'Righteous', cursive;
+    font-size: 16px;
 }
 input[type="email"]{
     display: block;
     margin-bottom: 5px;
-    width: 100%;
+    width: 200%;
     background: #FAF6D9;
     border: 2px solid steelblue;
     border-radius: 10px;
+    font-family: 'Righteous', cursive;
+    font-size: 16px;
 }
 input[type="submit"]{
     margin-bottom: 5px;
-    width: 270px;
+    width: 260px;
     background: white;
     border: 2px solid steelblue;
     border-radius: 10px;
     color: steelblue;
     align-items: center;
     cursor: pointer;
+    font-family: 'Righteous', cursive;
+    font-size: 16px;
 }
 input:focus{
     background:white;
+}
+@media screen and (max-width:750px){
+    .footer{
+        width: 130%;
+    }
+    .header{
+        width: 130%;
+    }
+    #title, #email, #text{
+        width: 100%;
+    }
+    #message{
+        width:250px;
+    }
 }
 </style>
 

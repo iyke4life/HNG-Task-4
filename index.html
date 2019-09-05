@@ -1,11 +1,13 @@
+
 <!DOCTYPE html>
+
 <html>
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>IKECHUKWU-PETER</title>
 	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
-    <link href="https://fonts.googleapis.com/css?family=Sanchez&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/?family=Sanchez&display=swap" rel="stylesheet">
     <link rel="icon" type="image/png" href="https://res.cloudinary.com/iyke4life/image/upload/v1567535148/resume_nlretz.png">
     
 </head>
@@ -20,7 +22,7 @@
                 var message = document.getElementById("message").value;
                 var error_message = document.getElementById("error_message");
                 var text;
-            
+            css
                 error_message.style.padding = "12px";
             
                 if(name.length < 4){
@@ -49,7 +51,7 @@
             </script>
 
     <div class="container">
-        <div class="header">
+        <div class="header" >
             <img class="img"src="https://res.cloudinary.com/iyke4life/image/upload/v1566518505/IMG_20180325_155109_710_hr8dw1.jpg" alt="profile-image">
             <div class="title-holder">
                 <div class="name">Ikechukwu Okonkwo</div>
@@ -252,7 +254,7 @@ hr{
     text-align: center;
     background-color: var(--dark-purple);
     height: 80px;
-    position: relative;
+    position: relative  ;
 }
 .img{
     width: 70px;
@@ -343,6 +345,7 @@ h3{
     color:white;
     background-color: var(--dark-purple);
     height: 50px;
+    width: auto;
 }  
 #myform{
     margin: 5px auto;
@@ -358,6 +361,10 @@ h3{
     font-weight: bold;
     transition: all 0.5s ease;
     border-radius: 10px;
+}
+@viewport {
+    width:device-width;
+    zooom: 1.0;
 }
 input{
     padding: 10px;
@@ -408,12 +415,12 @@ input[type="submit"]{
 input:focus{
     background:white;
 }
-@media screen and (max-width:750px){
+@media screen and (max-width:720px){
     .footer{
-        width: 130%;
+        width: 180%;
     }
     .header{
-        width: 130%;
+        width: 180%;
     }
     #title, #email, #text{
         width: 100%;

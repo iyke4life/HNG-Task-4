@@ -4,7 +4,9 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="HandheldFriendly" content="true">
 	<title>IKECHUKWU-PETER</title>
 	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
     <link href="https://fonts.googleapis.com/?family=Sanchez&display=swap" rel="stylesheet">
@@ -23,6 +25,7 @@
                 var error_message = document.getElementById("error_message");
                 var text;
                 error_message.style.padding = "12px";
+                error_message.style.border = "2px solid #DC143C";
             
                 if(name.length < 4){
                     text = "Please enter valid Name, at least 4 characters";
@@ -30,7 +33,7 @@
                     return false;
                 }
                 if(email.indexOf("@") == -1 || email.length < 2){
-                    text = "Please enter valid Email";
+                    text = "Please enter a valid Email";
                     error_message.innerHTML = text;
                     return false;
                 }
@@ -361,11 +364,13 @@ h3{
 .contact-me #error_message{
     padding: 0px; 
     width: 310px;
-    background: #FE8B8E;
+    background: var(--yellowish);
     font-size: 13px;
+    color: #DC143C;
     font-weight: bold;
     transition: all 0.5s ease;
     border-radius: 10px;
+    border: none;
 }
 @viewport {
     width:device-width;
